@@ -22,7 +22,9 @@ int sensor_left;
 int sensor_right;
 
 const int lowTh = 0;
-const int speed_av = 400;
+const int speed_av = 300;
+const int turn_delay = 200;
+const int waiting_delay = 1000;
 
 void setup() {
 
@@ -51,7 +53,7 @@ void move_left() {
   analogWrite(pinMotorBD, lowTh);
   analogWrite(pinMotorFG, lowTh);
   analogWrite(pinMotorFD, speed_av);  
-  delay(1000);                   // pour se retrouver à 90° après ce temps
+  delay(turn_delay);                   // pour se retrouver à 90° après ce temps
   
 }
 
@@ -61,7 +63,7 @@ void move_right() {
   analogWrite(pinMotorBD, speed_av);
   analogWrite(pinMotorFG, speed_av);
   analogWrite(pinMotorFD, lowTh); 
-  delay(1000);                     // pour se retrouver à 90° après ce temps
+  delay(turn_delay);                     // pour se retrouver à 90° après ce temps
   
 }
 
@@ -143,7 +145,7 @@ void chose_direction(int &left_increment , int &right_increment , int &forward_i
          }
          forward_increment = 0;
          move_forward();
-         delay(1000);
+         delay(waiting_delay);
        }
 
     else if (sensor_left > 100 || sensor_right > 100)
@@ -165,7 +167,7 @@ void chose_direction(int &left_increment , int &right_increment , int &forward_i
           }
           left_increment = 0;
           move_forward();
-          delay(1000);
+          delay(waiting_delay);
         }
       }
       else if (sensor_right > 100 && sensor_left <= 100)
@@ -191,7 +193,7 @@ void chose_direction(int &left_increment , int &right_increment , int &forward_i
             }
             right_increment = 0;
             move_forward();
-            delay(1000);
+            delay(waiting_delay);
           }
         }
       }
@@ -222,7 +224,7 @@ void chose_direction(int &left_increment , int &right_increment , int &forward_i
           
           forward_increment = 0;
           move_forward();
-          delay(1000);
+          delay(waiting_delay);
         }
       }
     
@@ -245,7 +247,7 @@ void chose_direction(int &left_increment , int &right_increment , int &forward_i
           }
           left_increment = 0;
           move_forward();
-          delay(1000);
+          delay(waiting_delay);
         }
       }
       else if (sensor_right > 100 && sensor_left <= 100)
@@ -265,7 +267,7 @@ void chose_direction(int &left_increment , int &right_increment , int &forward_i
           }
           right_increment = 0;
           move_forward();
-          delay(1000);
+          delay(waiting_delay);
          }
        }
     }
@@ -277,7 +279,7 @@ void chose_direction(int &left_increment , int &right_increment , int &forward_i
       {
         Serial.println("UTURN");
         move_left();
-        delay(2000);
+        delay(turn_delay);
         stop_running();
         decrement_pile = true;
         back_increment = 0;
