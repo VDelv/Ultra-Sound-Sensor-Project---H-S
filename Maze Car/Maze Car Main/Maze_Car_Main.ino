@@ -1,3 +1,5 @@
+// By Victor Delvigne & Nathan SEUTIN
+
 #include <stack>
 #include <Wire.h>
 
