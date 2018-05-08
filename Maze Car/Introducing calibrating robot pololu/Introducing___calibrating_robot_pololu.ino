@@ -1,4 +1,3 @@
-#include <stack>
 #include <Wire.h>
 
 using namespace std;
@@ -12,7 +11,7 @@ using namespace std;
 stack<char> memory;
 
 const int lowTh = 0;
-const int speed_av = 275;
+const int speed_av = 300;
 
 void setup() {
 
@@ -41,7 +40,7 @@ void move_left() {
   analogWrite(pinMotorBD, lowTh);
   analogWrite(pinMotorFG, lowTh);
   analogWrite(pinMotorFD, speed_av);  
-  delay(150);                   // pour se retrouver à 90° après ce temps
+  delay(200);                   // pour se retrouver à 90° après ce temps
   
 }
 
@@ -51,7 +50,7 @@ void move_right() {
   analogWrite(pinMotorBD, speed_av);
   analogWrite(pinMotorFG, speed_av);
   analogWrite(pinMotorFD, lowTh); 
-  delay(150);                     // pour se retrouver à 90° après ce temps
+  delay(200);                     // pour se retrouver à 90° après ce temps
   
 }
 
