@@ -1,4 +1,4 @@
-// By Victor Delvigne & Nathan SEUTIN
+// By Victor D. & Nathan S., MA1 Electrical engineering students at F.P.Ms
 
 #include <stack>
 #include <Wire.h>
