@@ -1,0 +1,1 @@
+This code is based on the tutorial, was adapted to the material we have. It is simply an ultra-sound sensor (SRF-02) and a buzzer connected to the ESP so it emits a "bip" sound when the sensor is detecting an obstacle. The closer the obstacle is, the higher the frequency of the sound will be.
