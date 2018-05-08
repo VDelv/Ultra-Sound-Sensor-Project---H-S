@@ -22,9 +22,14 @@ int sensor_left;
 int sensor_right;
 
 const int lowTh = 0;
-const int speed_av = 300;
-const int turn_delay = 200;
-const int waiting_delay = 1000;
+const int speed_av = 300;          // these 3 integers are parameters that need to be calibrated
+const int turn_delay = 200;        // so the car can move properly in the maze
+const int waiting_delay = 1000;    // :)
+
+// This code includes a stack. It is the memory of the robot, when he will move to the left, we will put in the stack the letter "L" 
+// so the robot will remember that he moved to the left. When the robot can only do a UTURN, he will then decrement the stack.
+// As he will have to take a decision (e.g. : left or right ?), he will decide to move like he did before. 
+// That means that he'll take an other path.
 
 void setup() {
 
@@ -81,9 +86,9 @@ void stay_steady() {
   int sensor_diff;
   sensor_diff = sensor_left - sensor_right;
   
-  if (sensor_diff > 30 || sensor_diff < -30)
+  if (sensor_diff > 30 || sensor_diff < -30)  //distance in CENTIMETERS
   {
-    if (sensor_diff > 30 && sensor_diff < 60)
+    if (sensor_diff > 30 && sensor_diff < 60)  //distance in CENTIMETERS
     {
       move_left();
       move_forward();
@@ -91,7 +96,7 @@ void stay_steady() {
       move_right();
       stop_running();
     }
-    if (sensor_diff < -30 && sensor_diff > -60)
+    if (sensor_diff < -30 && sensor_diff > -60)  //distance in CENTIMETERS
     {
       move_right();
       move_forward();
@@ -105,14 +110,14 @@ void stay_steady() {
 
 void chose_direction(int &left_increment , int &right_increment , int &forward_increment , int &back_increment) {
 
-  if(sensor_front > 40)
+  if(sensor_front > 40) //distance in CENTIMETERS
   {
     move_forward();
 
-    if (sensor_left > 100 && sensor_right > 100)
+    if (sensor_left > 100 && sensor_right > 100)  //distance in CENTIMETERS
     {
       forward_increment++;
-        if (forward_increment > 2)
+        if (forward_increment > 2)   //to be sure that if one measurement is false, the robot has to check again this condition
         {
           decrement_pile = false;
           if (memory.empty())
@@ -148,12 +153,12 @@ void chose_direction(int &left_increment , int &right_increment , int &forward_i
          delay(waiting_delay);
        }
 
-    else if (sensor_left > 100 || sensor_right > 100)
+    else if (sensor_left > 100 || sensor_right > 100)    //distance in CENTIMETERS
     {
-      if (sensor_left > 100 && sensor_right <= 100)
+      if (sensor_left > 100 && sensor_right <= 100)      //distance in CENTIMETERS
       {
         left_increment++;
-        if (left_increment > 2)
+        if (left_increment > 2)    //to be sure that if one measurement is false, the robot has to check again this condition
         {
           move_left();
           stop_running();
@@ -170,10 +175,10 @@ void chose_direction(int &left_increment , int &right_increment , int &forward_i
           delay(waiting_delay);
         }
       }
-      else if (sensor_right > 100 && sensor_left <= 100)
+      else if (sensor_right > 100 && sensor_left <= 100)  //distance in CENTIMETERS
       {
         right_increment++;
-        if (right_increment > 2)
+        if (right_increment > 2)       //to be sure that if one measurement is false, the robot has to check again this condition
         {
           if (memory.top() == 'F')
           {
@@ -207,14 +212,14 @@ void chose_direction(int &left_increment , int &right_increment , int &forward_i
     }
   }
 
-  else if (sensor_front <= 40)
+  else if (sensor_front <= 40)    //distance in CENTIMETERS
   {
     stop_running();
     
-    if (sensor_left > 100 && sensor_right > 100)
+    if (sensor_left > 100 && sensor_right > 100)   //distance in CENTIMETERS
     {
       forward_increment++;
-        if (forward_increment > 2)
+        if (forward_increment > 2)       //to be sure that if one measurement is false, the robot has to check again this condition
         {
           decrement_pile = false;
           
@@ -228,12 +233,12 @@ void chose_direction(int &left_increment , int &right_increment , int &forward_i
         }
       }
     
-    else if (sensor_left > 100 || sensor_right > 100)
+    else if (sensor_left > 100 || sensor_right > 100)  //distance in CENTIMETERS
     {
-      if (sensor_left > 100 && sensor_right <= 100)
+      if (sensor_left > 100 && sensor_right <= 100)    //distance in CENTIMETERS
       {
         left_increment++;
-        if (left_increment > 2)
+        if (left_increment > 2)     //to be sure that if one measurement is false, the robot has to check again this condition
         {
           move_left();
           stop_running();
@@ -250,10 +255,10 @@ void chose_direction(int &left_increment , int &right_increment , int &forward_i
           delay(waiting_delay);
         }
       }
-      else if (sensor_right > 100 && sensor_left <= 100)
+      else if (sensor_right > 100 && sensor_left <= 100)  //distance in CENTIMETERS
       {
         right_increment++;
-        if (right_increment > 2)
+        if (right_increment > 2)     //to be sure that if one measurement is false, the robot has to check again this condition
         {
           move_right();
           stop_running();
@@ -272,10 +277,10 @@ void chose_direction(int &left_increment , int &right_increment , int &forward_i
        }
     }
     
-    else if (sensor_left < 100 && sensor_right < 100)
+    else if (sensor_left < 100 && sensor_right < 100)   //distance in CENTIMETERS
     {
       back_increment++;
-      if (back_increment > 2)
+      if (back_increment > 2)        //to be sure that if one measurement is false, the robot has to check again this condition
       {
         Serial.println("UTURN");
         move_left();
@@ -290,12 +295,12 @@ void chose_direction(int &left_increment , int &right_increment , int &forward_i
 
 void sensing(int &sensor_f , int &sensor_l , int &sensor_r)
 {
-    //CAPTOR 1 : adress 112 for FRONT SENSOR
+  //CAPTOR 1 : adress 112 for FRONT SENSOR
   
   // step 1: instruct sensor to read echoes
   Wire.beginTransmission(112); // transmit to device #112 (0x70)
   // the address specified in the datasheet is 224 (0xE0)
-  // but i2c adressing uses the high 7 bits so it's 112
+  // but i2c adressing uses the high 7 bits so it's 112 => least significant bit (at the right) becomes the most significative bit
   Wire.write(byte(0x00));      // sets register pointer to the command register (0x00)
   Wire.write(byte(0x51));      // command sensor to measure in "centimeters" (0x51)
   // use 0x51 for centimeters
@@ -304,7 +309,7 @@ void sensing(int &sensor_f , int &sensor_l , int &sensor_r)
   
   //CAPTOR 2 : adress 113 for LEFT SENSOR
   
-  Wire.beginTransmission(113); // transmit to device #113
+  Wire.beginTransmission(113); // transmit to device #113 (= 0xE2)
   Wire.write(byte(0x00));      // sets register pointer to the command register (0x00)
   Wire.write(byte(0x51));      // command sensor to measure in "centimeters" (0x51)
   // use 0x51 for centimeters
@@ -313,7 +318,7 @@ void sensing(int &sensor_f , int &sensor_l , int &sensor_r)
   
   //CAPTOR 3 : adress 114 for RIGHT SENSOR
   
-  Wire.beginTransmission(114); // transmit to device #114
+  Wire.beginTransmission(114); // transmit to device #114 (= 0xE4)
   Wire.write(byte(0x00));      // sets register pointer to the command register (0x00)
   Wire.write(byte(0x51));      // command sensor to measure in "centimeters" (0x51)
   // use 0x51 for centimeters
