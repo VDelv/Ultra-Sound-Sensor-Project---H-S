@@ -11,4 +11,6 @@ Here's the pinout of our project, including the ESP, 3 SRF-02 sensors & the Polo
 
 ![maze_car_pinout_final](https://user-images.githubusercontent.com/39089674/39775119-3added92-52fd-11e8-963f-2799ac275f6b.png)
 
+On the Pololu robot, we can find a H-bridge for DC motors. This component is very important to control each motor of the two wheels. We use PWM (https://en.wikipedia.org/wiki/Pulse-width_modulation) to control each motor. The H-bridge is simple to use and to understand, if you don't know yet how it works, take a look at : https://en.wikipedia.org/wiki/H_bridge. If you are working on a platform made by yourself, without H-bridge for DC motors, you can buy the L298 which is used to control the motors.
+
 PS : Note that the code imported on the ESP (= Maze_Car_Main.ino) is adapted to a specific situation, distances and delays are important parameters to properly calibrate our car.
