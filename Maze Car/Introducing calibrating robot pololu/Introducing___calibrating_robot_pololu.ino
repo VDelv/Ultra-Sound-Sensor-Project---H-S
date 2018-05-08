@@ -5,21 +5,11 @@ using namespace std;
 
 
 #define pinMotorBD D2
-#define pinMotorFD D3 
+#define pinMotorFD D3
 #define pinMotorBG D6
 #define pinMotorFG D7
 
 stack<char> memory;
-
-bool decrement_pile = false;
-int l = 0;
-int r = 0;
-int forward_param = 0;
-int back = 0;
-
-int sensor_front;
-int sensor_left;
-int sensor_right;
 
 const int lowTh = 0;
 const int speed_av = 275;
@@ -40,7 +30,7 @@ void move_forward() {
 
   analogWrite(pinMotorBG, lowTh);
   analogWrite(pinMotorBD, lowTh);
-  analogWrite(pinMotorFG, 1.05*speed_av);
+  analogWrite(pinMotorFG, 1.05*speed_av);  //because the left wheel on the robot was turning slower than the right one
   analogWrite(pinMotorFD, speed_av);  
   
 }
