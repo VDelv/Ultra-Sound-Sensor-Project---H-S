@@ -1,7 +1,7 @@
 # Description of the Maze Car 
 
-The main goal of that school project is to programm a small robot called pololu to allow it to go out from a maze. 
+The main goal of this project is to program a small robot called Pololu so it is able to get out from a maze. 
 
-The way to locate it is based on the used of ultra sound captor "SRF02". When the distance between the robot and an obstacle is lower than a treshold, the robot has to take a decision in funciton of the value returned by other sensor (if place at the left and obstacle forward => go left). 
+The way to locate it is based on the use of ultra-sound sensor "SRF02". When the distance between the robot and an obstacle is lower than a threshold, the robot has to take a decision according to the value returned by other sensors (e.g. : If there's a wall ahead and to the right but the sensor doesn't detect any obstacle on the left, the robot will take the decision to move to the left). 
 
-In the first code called "Introducing & Calibrating ... " we determine the value of the parameters in function of the environment. The value of them has to be modify if the maze changed. 
+In the first code called "Introducing & Calibrating ... " we determine the value of the parameters in function of the environment. The value of these has to be modified if the size of the maze changed (e.g. : distance between the walls). 
