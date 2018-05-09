@@ -6,10 +6,10 @@
 using namespace std;
 
 
-#define pinMotorBD D2
-#define pinMotorFD D3 
-#define pinMotorBG D6
-#define pinMotorFG D7
+#define pinMotorBD D2  // backwards for right wheel
+#define pinMotorFD D3  // forward for right wheel
+#define pinMotorBG D6  // backwards for left wheel
+#define pinMotorFG D7  // forward for left wheel
 
 stack<char> memory;
 
