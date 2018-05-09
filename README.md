@@ -1,4 +1,4 @@
-# Ultra-Sound-Sensor-Project---H-S
+# Ultra-Sound-Sensor-Project---H-S (DIY)
 Project done in the context of the lesson of Hardware &amp; Software Platforms (2 ECTS) given by Pr. Valderrama at Polytechnical Faculty of Mons.
 
 We started from a tutorial proposed on the website "Instructables", called "Ultra-sound car parking sensor" (http://www.instructables.com/id/Arduino-Parking-Sensor/).
