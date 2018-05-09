@@ -11,7 +11,7 @@ using namespace std;
 stack<char> memory;
 
 const int lowTh = 0;
-const int speed_av = 300;
+const int speed_av = 255;
 
 void setup() {
 
