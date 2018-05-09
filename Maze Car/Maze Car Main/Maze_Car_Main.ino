@@ -24,8 +24,8 @@ int sensor_left;
 int sensor_right;
 
 const int lowTh = 0;
-const int speed_av = 300;          // these 3 integers are parameters that need to be calibrated
-const int turn_delay = 200;        // so the car can move properly in the maze
+const int speed_av = 255;          // these 3 integers are parameters that need to be calibrated
+const int turn_delay = 500;        // so the car can move properly in the maze
 const int waiting_delay = 1000;    // :)
 
 // This code includes a stack. It is the memory of the robot, when he will move to the left, we will put in the stack the letter "L" 
