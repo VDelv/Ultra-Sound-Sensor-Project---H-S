@@ -157,7 +157,7 @@ void chose_direction(int &left_increment , int &right_increment , int &forward_i
 
     else if (sensor_left > 100 || sensor_right > 100)    //distance in CENTIMETERS
     {
-      if (sensor_left > 100 && sensor_right <= 100)      //distance in CENTIMETERS
+      if (sensor_left > 100)      //distance in CENTIMETERS
       {
         left_increment++;
         if (left_increment > 2)    //to be sure that if one measurement is false, the robot has to check again this condition
