@@ -8,8 +8,6 @@ using namespace std;
 #define pinMotorBG D6
 #define pinMotorFG D7
 
-stack<char> memory;
-
 const int lowTh = 0;
 const int speed_av = 255;
 
