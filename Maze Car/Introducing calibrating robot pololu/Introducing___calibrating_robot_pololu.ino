@@ -66,9 +66,11 @@ void loop() {
   move_forward();
   delay(1500);
   move_left();
-  move_forward();
   delay(1500);
   move_right();
+  delay(1500);
+  move_forward();
+  delay(1500);
   stop_running();
   delay(5000);
     
