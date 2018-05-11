@@ -17,6 +17,15 @@ Our robot uses as said above the Pololu platform, an ESP (lolin NodeMCU) and 3 S
 
 //PICTURE//
 
+## Electronic components needed : 
+- 1x microcontroller programmable in C++, in our case an ESP
+- 3x Ultra-sound sensors, preferably using I²C instead of UART (because you only use 4 pins for every I²C sensors), in our case 3x SRF-02
+- 1x H-bridge for DC motors, preferably a L298N because it is widely used.
+- 2x DC motors (the model you prefer, be careful to its input voltage, it may require an external voltage source)
+- 1x 5V battery
+
+You can build your circuit on a Pololu robot, or an other platform. You must check if the platform already includes DC motors and H-bride. If yes, you don't need these components anymore.
+
 ## Finally, what is contained in each file of this github :
 - Car Park Sensor : contains the tutorial code
 - Documentation : contains two datasheets for better understanding of components
