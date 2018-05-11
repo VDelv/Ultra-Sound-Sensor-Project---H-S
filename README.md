@@ -15,7 +15,9 @@ On the Pololu robot, we can find a H-bridge for DC motors. This component is ver
 
 Our robot uses as said above the Pololu platform, an ESP (lolin NodeMCU) and 3 SRF-02 sensors -> These 3 sensors are placed in a particular way. One is looking at the left, one at the right and the other forward. Here's the picture of the "car" :
 
-//PICTURE//
+![20180509_134448-1](https://user-images.githubusercontent.com/39089674/39933677-eb6584de-5543-11e8-8d4d-dccca4452b3e.jpg)
+
+![20180509_134501-1](https://user-images.githubusercontent.com/39089674/39933708-f836da3c-5543-11e8-9ee5-11d36f9bd57b.jpg)
 
 ## Electronic components needed : 
 - 1x microcontroller programmable in C++, in our case an ESP
