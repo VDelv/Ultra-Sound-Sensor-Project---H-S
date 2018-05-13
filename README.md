@@ -28,7 +28,7 @@ Our robot uses as said above the Pololu platform, an ESP (lolin NodeMCU) and 3 S
 
 You can build your circuit on a Pololu robot, or an other platform. You must check if the platform already includes DC motors and H-bridge. If yes, you don't need these components anymore.
 
-If you don't encounter any problem, this project should be done in approximately 16 hours.
+If you don't encounter any problem, this project should be done in approximately 10 hours.
 
 ## Finally, what is contained in each file of this github :
 - Car Park Sensor : contains the tutorial code
