@@ -1,10 +1,10 @@
 # Ultra-Sound-Sensor-Project---H-S (DIY)
 Project done in the context of the lesson of Hardware &amp; Software Platforms (2 ECTS) given by Pr. Valderrama at Polytechnical Faculty of Mons.
 
-Group number: 04
-Group members: Victor Delvigne & Nathan Seutin
-Project title: Maze Car (Ultra-sound Sensor Project)
-Project link: https://github.com/VDelv/Ultra-Sound-Sensor-Project---H-S
+- Group number: 04
+- Group members: Victor Delvigne & Nathan Seutin
+- Project title: Maze Car (Ultra-sound Sensor Project)
+- Project link: https://github.com/VDelv/Ultra-Sound-Sensor-Project---H-S
 
 We started from a tutorial proposed on the website "Instructables", called "Ultra-sound car parking sensor" (http://www.instructables.com/id/Arduino-Parking-Sensor/).
 
