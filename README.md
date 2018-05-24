@@ -41,6 +41,8 @@ If you don't encounter any problem, this project should be done in less than 16 
 - Introducing Ultra Sound Sensor : contains two codes, these are used to check if each device is well connected
 - Maze Car : contains the code of calibration of the robot/car and the main code of it, a description of this code and a state diagram to have a better understanding of the code.
 
+This project introduces you to autonomous cars. In fact, the maze car is a simple example of an autonomous car, it takes a decision by itself depending on the situation thanks to the three ultra-sound sensors.
+
 Link to the video (Robot executing several functions): https://www.youtube.com/watch?v=AbpuYF154vg
 
 PS : Note that the code imported on the ESP (= Maze_Car_Main.ino) is adapted to a specific situation, distances and delays are important parameters to properly calibrate our car.
