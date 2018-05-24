@@ -3,10 +3,10 @@ Project done in the context of the lesson of Hardware &amp; Software Platforms (
 
 This project introduces you to autonomous cars. In fact, the maze car is a simple example of an autonomous car, it takes a decision by itself depending on the situation thanks to the three ultra-sound sensors.
 
-- Group number: 04
-- Group members: Victor Delvigne (victor.delvigne@student.umons.ac.be) & Nathan Seutin (nathan.seutin@student.umons.ac.be)
-- Project title: Maze Car (Ultra-sound Sensor Project)
-- Project link: https://github.com/VDelv/Ultra-Sound-Sensor-Project---H-S
+- Group number: 04;
+- Group members: Victor Delvigne (victor.delvigne@student.umons.ac.be) & Nathan Seutin (nathan.seutin@student.umons.ac.be);
+- Project title: Maze Car (Ultra-sound Sensor Project);
+- Project link: https://github.com/VDelv/Ultra-Sound-Sensor-Project---H-S.
 
 We started from a tutorial proposed on the website "Instructables", called "Ultra-sound car parking sensor" (http://www.instructables.com/id/Arduino-Parking-Sensor/).
 
@@ -27,20 +27,21 @@ Our robot uses as said above the Pololu platform, an ESP (lolin NodeMCU) and 3 S
 ![20180509_134501-1](https://user-images.githubusercontent.com/39089674/39933708-f836da3c-5543-11e8-9ee5-11d36f9bd57b.jpg)
 
 ## Electronic components needed: 
-- 1x microcontroller programmable in C++, in our case an ESP
-- 3x Ultra-sound sensors, preferably using I²C instead of UART (because you only use 4 pins for every I²C sensors), in our case 3x SRF-02
-- 1x H-bridge for DC motors, preferably a L298N because it is widely used.
-- 2x DC motors (the model you prefer, be careful to its input voltage, it may require an external voltage source)
-- 1x 5V battery
+- 1x microcontroller programmable in C++, in our case an ESP;
+- 3x Ultra-sound sensors, preferably using I²C instead of UART (because you only use 4 pins for every I²C sensors), in our case 3x SRF-02;
+- 1x H-bridge for DC motors, preferably a L298N because it is widely used;
+- 2x DC motors (the model you prefer, be careful to its input voltage, it may require an external voltage source);
+- 1x 5V battery;
+- More than 20x male/female pins, depending on your preferences. You need it to connect each device to an other.
 
 You can build your circuit on a Pololu robot, or an other platform. You must check if the platform already includes DC motors and H-bridge. If yes, you don't need these components anymore.
 
 If you don't encounter any problem, this project should be done in less than 16 hours.
 
 ## Finally, what is contained in each file of this github:
-- Car Park Sensor : contains the tutorial code
-- Documentation : contains two datasheets for better understanding of components
-- Introducing Ultra Sound Sensor : contains two codes, these are used to check if each device is well connected
+- Car Park Sensor : contains the tutorial code;
+- Documentation : contains two datasheets for better understanding of components;
+- Introducing Ultra Sound Sensor : contains two codes, these are used to check if each device is well connected;
 - Maze Car : contains the code of calibration of the robot/car and the main code of it, a description of this code and a state diagram to have a better understanding of the code.
 
 Link to the video (Robot executing several functions): https://www.youtube.com/watch?v=AbpuYF154vg
