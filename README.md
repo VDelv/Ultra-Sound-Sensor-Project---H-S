@@ -1,6 +1,8 @@
 # Ultra-Sound-Sensor-Project---H-S (DIY)
 Project done in the context of the lesson of Hardware &amp; Software Platforms (2 ECTS) 2017-2018 given by Pr. Valderrama at Polytechnical Faculty of Mons.
 
+This project introduces you to autonomous cars. In fact, the maze car is a simple example of an autonomous car, it takes a decision by itself depending on the situation thanks to the three ultra-sound sensors.
+
 - Group number: 04
 - Group members: Victor Delvigne (victor.delvigne@student.umons.ac.be) & Nathan Seutin (nathan.seutin@student.umons.ac.be)
 - Project title: Maze Car (Ultra-sound Sensor Project)
@@ -10,9 +12,7 @@ We started from a tutorial proposed on the website "Instructables", called "Ultr
 
 Once the tutorial has been achieved, we then must innovate and bring our personal touch, make an improvement. 
 
-This project introduces you to autonomous cars. In fact, the maze car is a simple example of an autonomous car, it takes a decision by itself depending on the situation thanks to the three ultra-sound sensors.
-
-Thus, from using one I²C ultra-sound sensor (SRF-02) and a buzzer connected to an ESP8266, we added two similar ultra-sound sensors. We are aiming to create an autonomous car able to get out of a maze, so the buzzer is not useful anymore. The ESP and sensors were connected on a platform/robot called "Pololu" created by Daniel Binon, technician in the SEMi of UMons (datasheets will be joined on this github to have a better understanding of the project).
+From using one I²C ultra-sound sensor (SRF-02) and a buzzer connected to an ESP8266, we added two similar ultra-sound sensors. We are aiming to create an autonomous car able to get out of a maze, so the buzzer is not useful anymore. The ESP and sensors were connected on a platform/robot called "Pololu" created by Daniel Binon, technician in the SEMi of UMons (datasheets will be joined on this github to have a better understanding of the project).
 
 Here's the pinout of our project, including the ESP, 3 SRF-02 sensors & the Pololu robot (see the pins & configuration of the platform Pololu in the "Documentation" file).
 
