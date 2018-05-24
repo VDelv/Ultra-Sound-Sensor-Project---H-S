@@ -2,7 +2,7 @@
 Project done in the context of the lesson of Hardware &amp; Software Platforms (2 ECTS) given by Pr. Valderrama at Polytechnical Faculty of Mons.
 
 - Group number: 04
-- Group members: Victor Delvigne & Nathan Seutin
+- Group members: Victor Delvigne (victor.delvigne@student.umons.ac.be) & Nathan Seutin (nathan.seutin@student.umons.ac.be)
 - Project title: Maze Car (Ultra-sound Sensor Project)
 - Project link: https://github.com/VDelv/Ultra-Sound-Sensor-Project---H-S
 
