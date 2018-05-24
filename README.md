@@ -10,6 +10,8 @@ We started from a tutorial proposed on the website "Instructables", called "Ultr
 
 Once the tutorial has been achieved, we then must innovate and bring our personal touch, make an improvement. 
 
+This project introduces you to autonomous cars. In fact, the maze car is a simple example of an autonomous car, it takes a decision by itself depending on the situation thanks to the three ultra-sound sensors.
+
 From using one I²C ultra-sound sensor (SRF-02) and a buzzer connected to an ESP8266, we added two similar ultra-sound sensors. We are aiming to create an autonomous car able to get out of a maze, so the buzzer is not useful anymore. The ESP and sensors were connected on a platform/robot called "Pololu" created by Daniel Binon, technician in the SEMi of UMons (datasheets will be joined on this github to have a better understanding of the project).
 
 Here's the pinout of our project, including the ESP, 3 SRF-02 sensors & the Pololu robot (see the pins & configuration of the platform Pololu in the "Documentation" file).
@@ -40,8 +42,6 @@ If you don't encounter any problem, this project should be done in less than 16 
 - Documentation : contains two datasheets for better understanding of components
 - Introducing Ultra Sound Sensor : contains two codes, these are used to check if each device is well connected
 - Maze Car : contains the code of calibration of the robot/car and the main code of it, a description of this code and a state diagram to have a better understanding of the code.
-
-This project introduces you to autonomous cars. In fact, the maze car is a simple example of an autonomous car, it takes a decision by itself depending on the situation thanks to the three ultra-sound sensors.
 
 Link to the video (Robot executing several functions): https://www.youtube.com/watch?v=AbpuYF154vg
 
