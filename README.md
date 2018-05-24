@@ -1,6 +1,11 @@
 # Ultra-Sound-Sensor-Project---H-S (DIY)
 Project done in the context of the lesson of Hardware &amp; Software Platforms (2 ECTS) given by Pr. Valderrama at Polytechnical Faculty of Mons.
 
+Group number: 04
+Group members: Victor Delvigne & Nathan Seutin
+Project title: Maze Car (Ultra-sound Sensor Project)
+Project link: https://github.com/VDelv/Ultra-Sound-Sensor-Project---H-S
+
 We started from a tutorial proposed on the website "Instructables", called "Ultra-sound car parking sensor" (http://www.instructables.com/id/Arduino-Parking-Sensor/).
 
 Once the tutorial has been achieved, we then must innovate and bring our personal touch, make an improvement. 
@@ -28,13 +33,13 @@ Our robot uses as said above the Pololu platform, an ESP (lolin NodeMCU) and 3 S
 
 You can build your circuit on a Pololu robot, or an other platform. You must check if the platform already includes DC motors and H-bridge. If yes, you don't need these components anymore.
 
-If you don't encounter any problem, this project should be done in approximately 10 hours.
+If you don't encounter any problem, this project should be done in less than 16 hours.
 
 ## Finally, what is contained in each file of this github :
 - Car Park Sensor : contains the tutorial code
 - Documentation : contains two datasheets for better understanding of components
 - Introducing Ultra Sound Sensor : contains two codes, these are used to check if each device is well connected
-- Maze Car : contains the code of calibration of the robot/car and the main code of it, + a description
+- Maze Car : contains the code of calibration of the robot/car and the main code of it, a description of this code and a state diagram to have a better understanding of the code.
 
 Link to the video (Robot executing several functions) : https://www.youtube.com/watch?v=AbpuYF154vg
 
