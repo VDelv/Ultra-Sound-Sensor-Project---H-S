@@ -18,13 +18,13 @@ Here's the pinout of our project, including the ESP, 3 SRF-02 sensors & the Polo
 
 On the Pololu robot, we can find a H-bridge for DC motors. This component is very important to control each motor of the two wheels. We use PWM (https://en.wikipedia.org/wiki/Pulse-width_modulation) to control each motor. The H-bridge is simple to use and to understand, if you don't know yet how it works, take a look at : https://en.wikipedia.org/wiki/H_bridge. If you are working on a platform made by yourself, without H-bridge for DC motors, you can buy the L298 which is used to control the motors.
 
-Our robot uses as said above the Pololu platform, an ESP (lolin NodeMCU) and 3 SRF-02 sensors -> These 3 sensors are placed in a particular way. One is looking at the left, one at the right and the other forward. Here's the picture of the "car" :
+Our robot uses as said above the Pololu platform, an ESP (lolin NodeMCU) and 3 SRF-02 sensors -> These 3 sensors are placed in a particular way. One is looking at the left, one at the right and the other forward. Here's the picture of the "car":
 
 ![20180509_134448-1](https://user-images.githubusercontent.com/39089674/39933677-eb6584de-5543-11e8-8d4d-dccca4452b3e.jpg)
 
 ![20180509_134501-1](https://user-images.githubusercontent.com/39089674/39933708-f836da3c-5543-11e8-9ee5-11d36f9bd57b.jpg)
 
-## Electronic components needed : 
+## Electronic components needed: 
 - 1x microcontroller programmable in C++, in our case an ESP
 - 3x Ultra-sound sensors, preferably using I²C instead of UART (because you only use 4 pins for every I²C sensors), in our case 3x SRF-02
 - 1x H-bridge for DC motors, preferably a L298N because it is widely used.
@@ -35,12 +35,12 @@ You can build your circuit on a Pololu robot, or an other platform. You must che
 
 If you don't encounter any problem, this project should be done in less than 16 hours.
 
-## Finally, what is contained in each file of this github :
+## Finally, what is contained in each file of this github:
 - Car Park Sensor : contains the tutorial code
 - Documentation : contains two datasheets for better understanding of components
 - Introducing Ultra Sound Sensor : contains two codes, these are used to check if each device is well connected
 - Maze Car : contains the code of calibration of the robot/car and the main code of it, a description of this code and a state diagram to have a better understanding of the code.
 
-Link to the video (Robot executing several functions) : https://www.youtube.com/watch?v=AbpuYF154vg
+Link to the video (Robot executing several functions): https://www.youtube.com/watch?v=AbpuYF154vg
 
 PS : Note that the code imported on the ESP (= Maze_Car_Main.ino) is adapted to a specific situation, distances and delays are important parameters to properly calibrate our car.
