@@ -2,6 +2,8 @@
 ![2](https://user-images.githubusercontent.com/36330539/41225900-35b456ac-6d70-11e8-9b9a-afe61f2aee7a.png)
 
 
+[![image.png](https://s33.postimg.cc/gh7b0issf/image.png)](https://postimg.cc/image/6wnodn3gb/)
+
 Project done in the context of the lesson of Hardware &amp; Software Platforms (2 ECTS) 2017-2018 given by Pr. Valderrama at Polytechnical Faculty of Mons.
 
 This project introduces you to autonomous cars. In fact, the maze car is a simple example of an autonomous car, it takes a decision by itself depending on the situation thanks to the three ultra-sound sensors.
