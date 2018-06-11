@@ -1,4 +1,6 @@
 # Maze Car (Ultra-sound Sensor Project) (DIY) - Hw/Sw
+![2](https://user-images.githubusercontent.com/36330539/41225900-35b456ac-6d70-11e8-9b9a-afe61f2aee7a.png)
+
 
 Project done in the context of the lesson of Hardware &amp; Software Platforms (2 ECTS) 2017-2018 given by Pr. Valderrama at Polytechnical Faculty of Mons.
 
